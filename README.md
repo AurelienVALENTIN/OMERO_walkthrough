@@ -23,16 +23,16 @@ Everything you need to install OMERO.server should be **[here](https://omero.rea
 
 However, you may encounter some errors. `omero admin diagnostics` helps a lot to identify them.
 
-For example, with this command you can get the version of the Ice module. OMERO needs version 3.6.5 but it is not the latest. A Python wheel link is provided in the OMERO.server installation guide, but it may generate an error. If this happens, download a different version depending on your OS [here](https://github.com/orgs/ome/repositories?q=zeroc-ice&type=all&language=&sort=). Click on one release on the right side of the page and copy the link to the .whl file. For example, on Ubuntu 20.04, [this is the link](https://github.com/ome/zeroc-ice-ubuntu2004/releases/download/0.2.0/zeroc_ice-3.6.5-cp38-cp38-linux_x86_64.whl).
+For example, with this command you can get the version of the Ice module. OMERO needs version 3.6.5 but it is not the latest. To install this specific version, a Python wheel link is provided in the OMERO.server installation guide, but it may generate an error. If this happens, download another file depending on your OS [here](https://github.com/orgs/ome/repositories?q=zeroc-ice&type=all&language=&sort=). Click on one release on the right side of the page and copy the link to the .whl file. For example, on Ubuntu 20.04, [this is the link](https://github.com/ome/zeroc-ice-ubuntu2004/releases/download/0.2.0/zeroc_ice-3.6.5-cp38-cp38-linux_x86_64.whl).
 
-Moreover, activating/deactivating the Python virtual environment may restart some environment variables as icegridadmin (you can find "icegridadmin not found" with `omero admin diagnostics`. In this case, just rerun:
+Moreover, activating/deactivating the Python virtual environment may restart some environment variables such as `icegridadmin` (you can find "icegridadmin not found" with `omero admin diagnostics`). In this case, just rerun:
 ```
 export ICE_HOME=/opt/ice-3.6.5
 export PATH="$ICE_HOME/bin:$PATH"
 export SLICEPATH="$ICE_HOME/slice"
 ```
 
-Sometimes, the `omero admin diagnostics` command just doesn't work. This may be due to a wrong OMERODIR environment variable, so run:
+Sometimes, the `omero admin diagnostics` command just doesn't work. This may be due to a wrong `OMERODIR` environment variable, so run:
 ```
 export OMERODIR=/opt/omero/server/OMERO.server
 ```
@@ -45,11 +45,11 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 
 With OMERO.web, you can create your own webclient ***to connect to your server anywhere***.
 
-Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html).**. Then, start, stop or restart your webclint with `omero web start`, `omero web stop` and `omero web restart`.
+Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html)**. Then, start, stop or restart your webclient with `omero web start`, `omero web stop` and `omero web restart`.
 
 Again, pay attention to the Ice version (see above).
 
-In this step `omero web config nginx --http "${WEBPORT}" –servername "${WEBSERVER_NAME}" > /opt/omero/web/omero-web/nginx.conf.tmp` be careful to the line break when copying and, if necessary, create the file first in a folder where you have all permissions before moving it to the right repository.
+In the step `omero web config nginx --http "${WEBPORT}" –servername "${WEBSERVER_NAME}" > /opt/omero/web/omero-web/nginx.conf.tmp`, be careful to the line break when copying and, if necessary, create the file first in a folder where you have all permissions before moving it to the right repository.
 
 Finally, if you get this error:
 ```
@@ -67,11 +67,13 @@ Etc.
 
 
 ## 2- Practice with this repository
-Feel free to download all the Python codes ***and the example data*** and try to reproduce what is shown in the video ***(link)***. Note that in each file, you will find a Link section at the end to have further information about the code used.
-1. [**Create a project and datasets**](Files/1_Create_project_and_datasets.py): To start, create a place to save your data. In OMERO, images are always stored in datasets, and datasets are always stored in projects.
+Feel free to download [all the Python codes](Files/) and [the example dataset](Dataset/) and try to reproduce what is shown in the demo video ***(link)***. Note that in each file, you will find a Link section at the end to have further information about the code used.
+
+Here are some details about the python files:
+1. [**Create a project and datasets**](Files/1_Create_project_and_datasets.py): To start, create a place to save your data. In OMERO, images are always stored in datasets, and datasets can be stored in projects.
 2. [**Import images**](Files/2_Image_import.py): Next, import your images using the CLI (Command Line Interface). There are several ways to import images, the classical way will copy-paste everything (which is not interesting for large datasets). Here, we use the so called "In-place" import to just create a link to the original file.
-3. [**Metadata import**](Files/3_Metadata_import.py): Each image has some relative information that can be stored in a .csv file. Here we associate all these metadata with each image as Key:Value pairs such as Year:2020.
-4. [**Queries**](Files/4_Queries.py): We can use the metadata to search for specific images and keep the result.
+3. [**Metadata import**](Files/3_Metadata_import.py): Each image has some relative information that can be stored in a .csv file. Here we associate all these metadata with each image as Key:Value pairs (e.g. Year:2020).
+4. [**Queries**](Files/4_Queries.py): We can use the metadata to search for specific images and save the result.
 5. [**OMERO.script**](Files/Threshold_script.py): It is possible to combine all the codes to create a script that can be imported into OMERO.insight to perform any image processing you want (here, an RGB threshold was chosen) on a specific set of images from a query.
 
 ## 3- Annexes
