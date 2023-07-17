@@ -5,9 +5,13 @@ It was developed by OME (Open Microscopy Environment) and it works with objects 
 
 This GitHub repository is in addition to a demo video (see below) (***Video not uploaded yet***) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
 
-[![Image management (import, query and processing) with OMERO](https://img.youtube.com/vi/QBEVWv-HJkg/0.jpg)](https://www.youtube.com/watch?v=QBEVWv-HJkg "Image management (import, query and processing) with OMERO")
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=QBEVWv-HJkg"><img src="https://img.youtube.com/vi/QBEVWv-HJkg/0.jpg"></img></a>
+</p>
 
+<!-- ! [![Image management (import, query and processing) with OMERO](https://img.youtube.com/vi/QBEVWv-HJkg/0.jpg)](https://www.youtube.com/watch?v=QBEVWv-HJkg "Image management (import, query and processing) with OMERO") -->
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
+
 ## 1- OMERO installation
 
 
