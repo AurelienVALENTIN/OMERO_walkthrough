@@ -6,7 +6,7 @@ This GitHub repository is in addition to a demo video (***Video not uploaded yet
 
 
 ### OMERO.insight
-<img src="Figures/OMERO_server.png" width = "250">
+<img src="Figures/OMERO_insight.png" width = "250">
 
 OMERO.insight is an application to run OMERO. You can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/getting-started-5.pdf).
 
