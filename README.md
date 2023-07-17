@@ -1,12 +1,12 @@
 # Image management (import, query and processing) with OMERO
 OMERO is a powerful tool for centralizing images in order to view, organize, analyze and share them. It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
 This GitHub repository is in addition to a demo video (***Video not uploaded yet***) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
-![Some figures](Figures/Some_figures.png?raw=true)
+<!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
 ## 1- OMERO installation
 
 
 ### OMERO.insight
-![OMERO.insight logo](Figures/OMERO_insight.png?raw=true)
+<img src="Figures/OMERO_insight.png" width = "250">
 
 OMERO.insight is an application to run OMERO. You can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/getting-started-5.pdf).
 
@@ -17,7 +17,7 @@ OMERO.insight is an application to run OMERO. You can check [this good Getting S
 
 
 ### OMERO.server
-![OMERO.server logo](Figures/OMERO_server.png?raw=true)
+<img src="Figures/OMERO_server.png" width = "250">
 
 Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html)**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart`.
 
@@ -41,7 +41,7 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 
 
 ### OMERO.web
-![OMERO.web logo](Figures/OMERO_web.png?raw=true)
+<img src="Figures/OMERO_web.png" width = "250">
 
 With OMERO.web, you can create your own webclient ***to connect to your server anywhere***.
 
@@ -83,7 +83,7 @@ If you want to go deeper into OMERO. Here is some additional information to try 
 
 #### OMERO.iviewer
 
-![OMERO.iviewer logo](Figures/OMERO_iviewer.png?raw=true)
+<img src="Figures/OMERO_iviewer.png" width = "250">
 
 With OMERO.iviewer, you can create and edit ROIs and perform some simple image processing. Here is [an overview](https://www.openmicroscopy.org/omero/iviewer) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/iviewer/docs/index.html).
 
@@ -91,11 +91,11 @@ With OMERO.iviewer, you can create and edit ROIs and perform some simple image p
 
 #### OMERO.figure
 
-![OMERO.figure logo](Figures/OMERO_figure.png?raw=true)
+<img src="Figures/OMERO_figure.png" width = "250">
 
 It is possible to create your own figures for publication using the server, i.e. without downloading any image. Here is [an overview](https://www.openmicroscopy.org/omero/figure/) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/figure/docs/index.html).
 
-![figure](Figures/figure.png)
+<img src="Figures/figure.png" width = "500">
 
 #### Other intresting features
 * As well as OMERO.iviewer and OMERO.figure, there are [other OMERO.web add-ons](https://omero-guides.readthedocs.io/en/latest/web_addons.html).
