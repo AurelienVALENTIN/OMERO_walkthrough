@@ -6,7 +6,7 @@ This GitHub repository is in addition to a demo video (***Video not uploaded yet
 
 
 ### OMERO.insight
-<img src="Figures/OMERO_insight.png" width = "250">
+<img src="Figures/OMERO_insight2.png" width = "250">
 
 OMERO.insight is an application to run OMERO. You can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/getting-started-5.pdf).
 
@@ -17,7 +17,7 @@ OMERO.insight is an application to run OMERO. You can check [this good Getting S
 
 
 ### OMERO.server
-<img src="Figures/OMERO_server.png" width = "250">
+<img src="Figures/OMERO_server2.png" width = "250">
 
 Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html)**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart`.
 
@@ -41,7 +41,7 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 
 
 ### OMERO.web
-<img src="Figures/OMERO_web.png" width = "250">
+<img src="Figures/OMERO_web2.png" width = "250">
 
 With OMERO.web, you can create your own webclient ***to connect to your server anywhere***.
 
