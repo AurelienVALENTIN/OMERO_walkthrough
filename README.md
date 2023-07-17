@@ -11,7 +11,7 @@ This GitHub repository is in addition to a demo video (***Video not uploaded yet
 OMERO.insight is an application to run OMERO. You can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/getting-started-5.pdf).
 
 * Download [here](https://www.openmicroscopy.org/omero/downloads/) the appropriate files for your OS.
-* Unzip and run .exe or bin/omero-insight
+* Unzip and run the .exe file or `bin/omero-insight`
 * Log in to a server. If you just want to try your hand at OMERO, you can use the OME demo server: create your account [here](https://demo.openmicroscopy.org/signup/) and then connect to OMERO.web [here](https://demo.openmicroscopy.org). Otherwise, you can create your own server by installing OMERO.server.
 
 
@@ -19,7 +19,7 @@ OMERO.insight is an application to run OMERO. You can check [this good Getting S
 ### OMERO.server
 ![OMERO.server logo](Figures/OMERO_server.png?raw=true)
 
-Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html).**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart`.
+Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html)**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart`.
 
 However, you may encounter some errors. `omero admin diagnostics` helps a lot to identify them.
 
