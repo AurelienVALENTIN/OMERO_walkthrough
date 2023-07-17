@@ -53,7 +53,7 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 ### OMERO.web
 <img src="Figures/OMERO_web.png" width = "250">
 
-With OMERO.web, you can create your own webclient ***to connect to your server anywhere***.
+With OMERO.web, you can create your own webclient to connect to your server anywhere.
 
 Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html)**. Then, start, stop or restart your webclient with `omero web start`, `omero web stop` and `omero web restart`.
 
