@@ -95,7 +95,7 @@ With OMERO.iviewer, you can create and edit ROIs and perform some simple image p
 
 It is possible to create your own figures for publication using the server, i.e. without downloading any image. Here is [an overview](https://www.openmicroscopy.org/omero/figure/) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/figure/docs/index.html).
 
-<img src="Figures/figure.png" width = "500">
+<img src="Figures/OMERO_figure_example.png" width = "500">
 
 #### Other intresting features
 * As well as OMERO.iviewer and OMERO.figure, there are [other OMERO.web add-ons](https://omero-guides.readthedocs.io/en/latest/web_addons.html).
