@@ -1,6 +1,12 @@
 # Image management (import, query and processing) with OMERO
-OMERO is a powerful tool for centralizing images in order to view, organize, analyze and share them. It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
-This GitHub repository is in addition to a demo video (***Video not uploaded yet***) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
+OMERO is a powerful tool for centralizing images in order to view, organize, analyze and share them.
+
+It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
+
+This GitHub repository is in addition to a demo video (see below) (***Video not uploaded yet***) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
+
+[![Image management (import, query and processing) with OMERO](https://img.youtube.com/vi/QBEVWv-HJkg/0.jpg)](https://www.youtube.com/watch?v=QBEVWv-HJkg "Image management (import, query and processing) with OMERO")
+
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
 ## 1- OMERO installation
 
