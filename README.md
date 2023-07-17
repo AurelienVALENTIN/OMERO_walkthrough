@@ -97,7 +97,9 @@ If you want to go deeper into OMERO. Here is some additional information to try 
 
 With OMERO.iviewer, you can create and edit ROIs and perform some simple image processing. Here is [an overview](https://www.openmicroscopy.org/omero/iviewer) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/iviewer/docs/index.html).
 
-![iviewer](Figures/OMERO_iviewer_example.png?raw=true)
+<p align="center">
+  <img src="Figures/OMERO_iviewer_example.png">
+</p>
 
 #### OMERO.figure
 
@@ -105,7 +107,9 @@ With OMERO.iviewer, you can create and edit ROIs and perform some simple image p
 
 It is possible to create your own figures for publication using the server, i.e. without downloading any image. Here is [an overview](https://www.openmicroscopy.org/omero/figure/) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/figure/docs/index.html).
 
-<img src="Figures/OMERO_figure_example.png" width = "500">
+<p align="center">
+  <img src="Figures/OMERO_figure_example.png" width = "500">
+</p>
 
 #### Other intresting features
 * As well as OMERO.iviewer and OMERO.figure, there are [other OMERO.web add-ons](https://omero-guides.readthedocs.io/en/latest/web_addons.html).
