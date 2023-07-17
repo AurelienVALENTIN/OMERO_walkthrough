@@ -1,6 +1,6 @@
 # OMERO walkthrough example to search and automatically process images
 OMERO is a powerful tool for centralizing images in order to view, organize, analyze and share them. It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
-In this GitHub repository you will find the codes (***and the data?***) used to show how to automatically import, query and process images in this demo video. (***Video not uploaded yet***)
+This GitHub repository is in addition to a demo video (***Video not uploaded yet***) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
 ![Some figures](Figures/Some_figures.png?raw=true)
 ## 1- OMERO installation
 
@@ -41,7 +41,7 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 
 
 ### OMERO.web
-![OMERO.web logo](Figures/OMERO_web.png)
+![OMERO.web logo](Figures/OMERO_web.png?raw=true)
 
 With OMERO.web, you can create your own webclient ***to connect to your server anywhere***.
 
@@ -81,21 +81,21 @@ If you want to go deeper into OMERO. Here is some additional information to try 
 
 #### OMERO.iviewer
 
-![OMERO.iviewer logo](Figures/OMERO_iviewer.png)
+![OMERO.iviewer logo](Figures/OMERO_iviewer.png?raw=true)
 
 With OMERO.iviewer, you can create and edit ROIs and perform some simple image processing. Here is [an overview](https://www.openmicroscopy.org/omero/iviewer) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/iviewer/docs/index.html).
 
-![iviewer](Figures/iviewer.png)
+![iviewer](Figures/iviewer.png?raw=true)
 
 #### OMERO.figure
 
-![OMERO.figure logo](Figures/OMERO_figure.png)
+![OMERO.figure logo](Figures/OMERO_figure.png?raw=true)
 
 It is possible to create your own figures for publication using the server, i.e. without downloading any image. Here is [an overview](https://www.openmicroscopy.org/omero/figure/) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/figure/docs/index.html).
 
 ![figure](Figures/figure.png)
 
-#### Other useful features
+#### Other intresting features
 * As well as OMERO.iviewer and OMERO.figure, there are [other OMERO.web add-ons](https://omero-guides.readthedocs.io/en/latest/web_addons.html).
 * [OMERO.tables](https://omero.readthedocs.io/en/stable/developers/Tables.html) for data storage and analysis
 * OMERO.web [custom applications](https://omero.readthedocs.io/en/stable/developers/Web/CreateApp.html) and [webclient plugins](https://omero.readthedocs.io/en/stable/developers/Web/WebclientPlugin.html)
