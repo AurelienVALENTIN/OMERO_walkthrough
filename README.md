@@ -87,7 +87,7 @@ If you want to go deeper into OMERO. Here is some additional information to try 
 
 With OMERO.iviewer, you can create and edit ROIs and perform some simple image processing. Here is [an overview](https://www.openmicroscopy.org/omero/iviewer) and the [full documentation](https://omero-guides.readthedocs.io/en/latest/iviewer/docs/index.html).
 
-![iviewer](Figures/iviewer.png?raw=true)
+![iviewer](Figures/OMERO_iviewer_example.png?raw=true)
 
 #### OMERO.figure
 
