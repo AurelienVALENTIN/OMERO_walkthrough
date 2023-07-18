@@ -13,7 +13,7 @@ This GitHub repository is in addition to a demo video (see below) that shows how
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
 
 ## 1- OMERO installation
-
+The commands presented here have been realized with Ubuntu 20.04.
 
 ### a. OMERO.insight
 <img src="Figures/OMERO_insight.png" width = "250">
@@ -62,7 +62,7 @@ Again, pay attention to the Ice version (see above).
 
 In the step `omero web config nginx --http "${WEBPORT}" –servername "${WEBSERVER_NAME}" > /opt/omero/web/omero-web/nginx.conf.tmp`, `${WEBPOT}` corresponds to `80` for HTTP or `443` for HTTPS (`443`is recommanded) and `${WEBSERVER_NAME}`corresponds to `localhost`.
 
-Several errers may occur. For example, if you get:
+Several errors may occur. For example, if you get:
 ```
 FATAL: Running /usr/local/bin/omero as root can corrupt your directory permissions
 ```
@@ -75,11 +75,11 @@ sudo chmod 777 /opt/omero/web/omero-web/*/*/*
 ...
 ```
 
-You could also have an issue when stoping the server where you get a warning that you should kill some processes by hand. By ignoring that, the server will stay in "development state" (that you can see with `omero web status`). This state will often return this error:
+You may also have a problem when stopping the server, when you get a warning that you should kill some processes by hand. If you ignore this, the server will remain in "development state" (how you can see it with `omero web status`). This state will often returns this error:
 ```
 ERROR: configuration mismatch. omero.web.application_server=development cannot be used with YOUR_COMMAND
 ```
-Try reexporting environment variables to solve that:
+Try reexporting environment variables to fix this:
 ```
 export WEBSESSION=True
 export OMERODIR=/opt/omero/web/omero-web
@@ -87,11 +87,47 @@ export PATH=/opt/omero/web/venv3/bin:$PATH
 ```
 
 #### Access to OMERO.server from your network
-From your computer where the server is mounted, you should be able to log in as root to the webclient by browsing [localhost](http://localhost) (or [127.0.0.1](http://127.0.0.1) which means the same). If you [set up a prefix](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/walkthrough/omeroweb-install-ubuntu2004-ice3.6.html#configuring-omero-web) such as `/omero`, you may encounter the page bellow (which is actually not an error). Just go to [localhost/omero](http://localhost/omero) (or [127.0.0.1/omero](http://127.0.0.1/omero)) to find the webclient.
+From your machine where the server is mounted, you should be able to log in to the webclient as root by browsing to [localhost](http://localhost) (or [127.0.0.1](http://127.0.0.1), which means the same thing). If you [set up a prefix](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/walkthrough/omeroweb-install-ubuntu2004-ice3.6.html#configuring-omero-web), as proposed in the guide, like `/omero`, you may see the page below (which is not actually an error). Just go to [localhost/omero](http://localhost/omero) (or [127.0.0.1/omero](http://127.0.0.1/omero)) to find the webclient.
 
-***But I still don't know how to add clients...***
+<p align="center">
+  <img src="Figures/Welcome_to_nginx.png">
+</p>
+
+To share your local server with other machines on the same network, you need to find your local IP address. You can look in the parameters or run `hostname -I` on Linux or `ipconfig` on Windows and Mac. It should look like `192.168.X.X`.
+
+Then you should be able to connect by following a link like [http://192.168.0.1](https://youtu.be/dQw4w9WgXcQ) or [http://192.168.0.1/omero](https://youtu.be/dQw4w9WgXcQ).
+
+If this doesn't work, you can try adding your port in the address using this template: `http://<YOU_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
+
+#### Access to OMERO.server from anywhere
+To be able to use your server no matter on what you are connected to, it is necessary to do some [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) (also called tunneling). To avoid some complicated settings, it is possible to use some tunneling tools. A great comparison of available solutions is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this GitHub, we will show how to create a public URL from our local server using [LocalToNet](https://localtonet.com).
+
+* Sign up [here](https://localtonet.com/Identity/Account/Register)
+* In the [My Tokens section](https://localtonet.com/usertoken), copy your token
+* On Linux, run the following commands (steps for other OS are [here](https://localtonet.com/blog/how-to-use-localtonet))
+  ```
+  wget https://localtonet.com/download/localtonet-linux-x64.zip
+  unzip localtonet-linux-x64.zip
+  chmod 777 ./localtonet
+  ./localtonet authtoken TOKEN_YOU_COPIED
+  ```
+* Create a tunnel [here](https://localtonet.com/tunnel/http) with a random subdomain (otherwise you have to pay), the default token, the default server, the default IP address and the port you set up (`80` or `443`).
+* Then, click on the Start button and your tunnel should appear on the terminal where you launched LocalToNet.
+* Finally, you can send your URL to anyone you want to access from anywhere (you can even customize the link with a URL shortener such as [Bitly](https://bitly.com/a/sign_up)).
 
 
+If you are determinate to use the public IP address. You can find it for example on [this page](https://ipinfo.io/ip). You can try to connect from your original network (by adding your port), but without a router loopback you will get this error because you are trying to connect to your own router:
+```
+Rejected request from RFC1918 IP to public server address
+```
+If you try to connect from another router without changing your router parameter, you should get some `ERR_CONNECTION_RESET`-like or `ERR_CONNECTION_TIMED_OUT`-like errors since you haven't port forwarded. There are plenty of guides on the net such as [this one](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide).
+
+#### OMERO.webclient VS OMERO.insight
+Congratulations! Now everyone can access to your server.
+
+The webclient allows users to have a quick overview of the server, but it has neither a native image importer nor a search menu (which are bypassable with [OMERO.script](https://omero-guides.readthedocs.io/projects/python/en/latest/server_script.html), see next section).
+
+On the other hand, a user can install [OMERO.insight](#a-omeroinsight) and connect to your server ***using your public IP address***.
 
 ## 2- Practice with this repository
 Feel free to download [all the Python codes](Files/) and [the example dataset](Dataset/) and try to reproduce what is shown in the demo video ***(link)***. Note that in each file, you will find a Link section at the end to have further information about the code used.
