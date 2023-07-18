@@ -15,7 +15,7 @@ This GitHub repository is in addition to a demo video (see below) that shows how
 ## 1- OMERO installation
 
 
-### OMERO.insight
+### a. OMERO.insight
 <img src="Figures/OMERO_insight.png" width = "250">
 
 OMERO.insight is an application to run OMERO. You can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/getting-started-5.pdf).
@@ -26,10 +26,10 @@ OMERO.insight is an application to run OMERO. You can check [this good Getting S
 
 
 
-### OMERO.server
+### b. OMERO.server
 <img src="Figures/OMERO_server.png" width = "250">
 
-Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html)**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart`.
+Everything you need to install OMERO.server should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/server-installation.html)**. Then, start, stop or restart your server with `omero admin start`, `omero admin stop` and `omero admin restart` from the virtual environment created.
 
 However, you may encounter some errors. `omero admin diagnostics` helps a lot to identify them.
 
@@ -50,18 +50,19 @@ export OMERODIR=/opt/omero/server/OMERO.server
 Finally, to avoid a DH key too small error, log in to OMERO.insight as root to the `localhost` server. The guide suggests `root` as username and `omero_root_password` as password.
 
 
-### OMERO.web
+### c. OMERO.web
 <img src="Figures/OMERO_web.png" width = "250">
 
 With OMERO.web, you can create your own webclient to connect to your server anywhere.
 
-Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html)**. Then, start, stop or restart your webclient with `omero web start`, `omero web stop` and `omero web restart`.
+#### Installation
+Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html)**. Then, start, stop or restart your webclient with `omero web start`, `omero web stop` and `omero web restart` from the virtual environment created.
 
 Again, pay attention to the Ice version (see above).
 
-In the step `omero web config nginx --http "${WEBPORT}" –servername "${WEBSERVER_NAME}" > /opt/omero/web/omero-web/nginx.conf.tmp`, be careful to the line break when copying and, if necessary, create the file first in a folder where you have all permissions before moving it to the right repository.
+In the step `omero web config nginx --http "${WEBPORT}" –servername "${WEBSERVER_NAME}" > /opt/omero/web/omero-web/nginx.conf.tmp`, `${WEBPOT}` corresponds to `80` for HTTP or `443` for HTTPS (`443`is recommanded) and `${WEBSERVER_NAME}`corresponds to `localhost`.
 
-Finally, if you get this error:
+Several errers may occur. For example, if you get:
 ```
 FATAL: Running /usr/local/bin/omero as root can corrupt your directory permissions
 ```
@@ -70,8 +71,24 @@ Try changing the permssions of all subdirectories:
 sudo chmod 777 /opt/omero/web/omero-web
 sudo chmod 777 /opt/omero/web/omero-web/*
 sudo chmod 777 /opt/omero/web/omero-web/*/*
-Etc.
+sudo chmod 777 /opt/omero/web/omero-web/*/*/*
+...
 ```
+
+You could also have an issue when stoping the server where you get a warning that you should kill some processes by hand. By ignoring that, the server will stay in "development state" (that you can see with `omero web status`). This state will often return this error:
+```
+ERROR: configuration mismatch. omero.web.application_server=development cannot be used with YOUR_COMMAND
+```
+Try reexporting environment variables to solve that:
+```
+export WEBSESSION=True
+export OMERODIR=/opt/omero/web/omero-web
+export PATH=/opt/omero/web/venv3/bin:$PATH
+```
+
+#### Access to OMERO.server from your network
+From your computer where the server is mounted, you should be able to log in as root to the webclient by browsing [localhost](http://localhost) (or [127.0.0.1](http://127.0.0.1) which means the same). If you [set up a prefix](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/walkthrough/omeroweb-install-ubuntu2004-ice3.6.html#configuring-omero-web) such as `/omero`, you may encounter the page bellow (which is actually not an error). Just go to [localhost/omero](http://localhost/omero) (or [127.0.0.1/omero](http://127.0.0.1/omero)) to find the webclient.
+
 ***But I still don't know how to add clients...***
 
 
