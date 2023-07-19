@@ -116,7 +116,9 @@ Then you should be able to connect by following a link like [http://192.168.0.17
 If this doesn't work, you can try adding your port in the address using this template: `http://<YOU_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
 
 #### Access to OMERO.server from anywhere
-To be able to use your server no matter on what you are connected to, it is necessary to do some [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) (also called tunneling). To avoid some complicated settings and security risks, it is possible to use some tunneling tools. A great comparison of available solutions is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this ReadMe, we will show how to create a public URL from our local server using [LocalToNet](https://localtonet.com).
+To be able to use your server no matter on what you are connected to, it is necessary to do either [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) or [tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol). Port forwarding allows any computer with OMERO.insight to connect to your server, but it requires more complicated settings than tunneling and is less secure. See [here](https://superuser.com/a/749928) for some technical differences between port forwarding and tunneling.
+
+So, let us opt for tunneling, a great comparison of available tools is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this ReadMe, we will show you how to create a public URL from our local server using the easy-to-use [LocalToNet](https://localtonet.com) website.
 
 * Sign up [here](https://localtonet.com/Identity/Account/Register)
 * In the [My Tokens section](https://localtonet.com/usertoken), copy your token
@@ -133,11 +135,11 @@ To be able to use your server no matter on what you are connected to, it is nece
 
 <br />
 
-If you are determinate to use the public IP address. You can find it for example on [this page](https://ipinfo.io/ip). You can try to connect from your original network (by adding your port), but without a router loopback you will get this error because you are trying to connect to your own router:
+If you are determined to port forward anyway, you will allow anyone with your public IP address (you can find it for example on [this page](https://ipinfo.io/ip)) to connect to your server. You can try to connect from your original network (by adding your port), but without a router loopback you will get this error because you are trying to connect to your own router:
 ```
 Rejected request from RFC1918 IP to public server address
 ```
-If you try to connect from another router without changing your router parameter, you should get some `ERR_CONNECTION_RESET`-like or `ERR_CONNECTION_TIMED_OUT`-like errors since you haven't port forwarded. There are plenty of guides on the net to change your router settings such as [this one](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide), but keep in mind that it will give more unsafe access to your computer.
+If you try to connect from another router without changing your router parameter, you should get some `ERR_CONNECTION_RESET`-like or `ERR_CONNECTION_TIMED_OUT`-like errors since you haven't port forwarded yet. There are plenty of guides on the net to change your router settings such as [this one](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide), but keep in mind that it will give more unsafe access to your computer. In the most cases, devices are connected to the same router so the local IP address is sufficient to connect to the webclient and OMERO.insight.
 
 #### OMERO.webclient VS OMERO.insight
 Congratulations! Now everyone can access to your server.
