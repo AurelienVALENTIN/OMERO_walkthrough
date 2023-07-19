@@ -19,7 +19,7 @@ This GitHub repository is in addition to a demo video (see below) that shows how
       - [Installation](#installation)
       - [Access to OMERO.server from your network](#access-to-omeroserver-from-your-network)
       - [Access to OMERO.server from anywhere](#access-to-omeroserver-from-anywhere)
-      - [OMERO.webclient VS OMERO.insight](omerowebclient-vs-omeroinsight)
+      - [OMERO.webclient VS OMERO.insight](#omerowebclient-vs-omeroinsight)
 - [2- Practice with this repository](#2--practice-with-this-repository)
 - [3- Annexes](3--annexes)
   - [a. Skipped features](#a-skipped-features)
