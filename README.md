@@ -9,8 +9,25 @@ This GitHub repository is in addition to a demo video (see below) that shows how
   <a href="https://www.youtube.com/watch?v=w03FbtofhTY"><img src="https://img.youtube.com/vi/w03FbtofhTY/0.jpg"></img></a>
 </p>
 
-<!-- ! [![Image management (import, query and processing) with OMERO](https://img.youtube.com/vi/QBEVWv-HJkg/0.jpg)](https://www.youtube.com/watch?v=QBEVWv-HJkg "Image management (import, query and processing) with OMERO") -->
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
+
+## Table of contents
+- [1- OMERO installation](#1--omero-installation)
+  - [a. OMERO.insight](#a-omeroinsight)
+  - [b. OMERO.server](#b-omeroserver)
+  - [c. OMERO.web](#c-omeroweb)
+      - [Installation](#installation)
+      - [Access to OMERO.server from your network](#access-to-omeroserver-from-your-network)
+      - [Access to OMERO.server from anywhere](#access-to-omeroserver-from-anywhere)
+      - [OMERO.webclient VS OMERO.insight](omerowebclient-vs-omeroinsight)
+- [2- Practice with this repository](#2--practice-with-this-repository)
+- [3- Annexes](3--annexes)
+  - [a. Skipped features](#a--skipped-features)
+    - [OMERO.iviewer](#omeroiviewer)
+    - [OMERO.figure](#omerofigure)
+    - [Other intresting features](#other-intresting-features)
+  - [b. Useful links](#b--useful-links)
+
 
 ## 1- OMERO installation
 The commands presented here have been realized with Ubuntu 20.04.
@@ -100,7 +117,7 @@ Then you should be able to connect by following a link like [http://192.168.0.1]
 If this doesn't work, you can try adding your port in the address using this template: `http://<YOU_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
 
 #### Access to OMERO.server from anywhere
-To be able to use your server no matter on what you are connected to, it is necessary to do some [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) (also called tunneling). To avoid some complicated settings, it is possible to use some tunneling tools. A great comparison of available solutions is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this GitHub, we will show how to create a public URL from our local server using [LocalToNet](https://localtonet.com).
+To be able to use your server no matter on what you are connected to, it is necessary to do some [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) (also called tunneling). To avoid some complicated settings and security risks, it is possible to use some tunneling tools. A great comparison of available solutions is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this ReadMe, we will show how to create a public URL from our local server using [LocalToNet](https://localtonet.com).
 
 * Sign up [here](https://localtonet.com/Identity/Account/Register)
 * In the [My Tokens section](https://localtonet.com/usertoken), copy your token
@@ -115,12 +132,13 @@ To be able to use your server no matter on what you are connected to, it is nece
 * Then, click on the Start button and your tunnel should appear on the terminal where you launched LocalToNet.
 * Finally, you can send your URL to anyone you want to access from anywhere (you can even customize the link with a URL shortener such as [Bitly](https://bitly.com/a/sign_up)).
 
+<br />
 
 If you are determinate to use the public IP address. You can find it for example on [this page](https://ipinfo.io/ip). You can try to connect from your original network (by adding your port), but without a router loopback you will get this error because you are trying to connect to your own router:
 ```
 Rejected request from RFC1918 IP to public server address
 ```
-If you try to connect from another router without changing your router parameter, you should get some `ERR_CONNECTION_RESET`-like or `ERR_CONNECTION_TIMED_OUT`-like errors since you haven't port forwarded. There are plenty of guides on the net such as [this one](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide).
+If you try to connect from another router without changing your router parameter, you should get some `ERR_CONNECTION_RESET`-like or `ERR_CONNECTION_TIMED_OUT`-like errors since you haven't port forwarded. There are plenty of guides on the net to change your router settings such as [this one](https://www.noip.com/support/knowledgebase/general-port-forwarding-guide), but keep in mind that it will give more unsafe access to your computer.
 
 #### OMERO.webclient VS OMERO.insight
 Congratulations! Now everyone can access to your server.
@@ -142,7 +160,7 @@ Here are some details about the python files:
 ## 3- Annexes
 If you want to go deeper into OMERO. Here is some additional information to try to cover the whole OMERO world.
 
-### Skipped features
+### a. Skipped features
 
 #### OMERO.iviewer
 
@@ -172,7 +190,7 @@ It is possible to create your own figures for publication using the server, i.e.
 * [OMERO.dropbox](https://omero.readthedocs.io/en/stable/sysadmins/dropbox.html) for automatic import and [other import methods](https://omero.readthedocs.io/en/stable/sysadmins/import-scenarios.html)
 * [OMERO.mde](https://omero-guides.readthedocs.io/en/latest/mde/docs/index.html) (an extension of OMERO.importer) to retrieve original metadata.
 
-### Useful links
+### b. Useful links
 * The [complete current OMERO documentation](https://omero.readthedocs.io/) and [all the documentation versions](https://docs.openmicroscopy.org/)
 * The [forum](https://forum.image.sc/tag/omero) (and [its previous version](https://www.openmicroscopy.org/community/viewforum.php?f=3))
 * The [Python language bindings](https://omero.readthedocs.io/en/stable/developers/Python.html) and the [OMERO.py documentation](https://omero-py.readthedocs.io/en/stable/)
