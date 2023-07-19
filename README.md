@@ -69,7 +69,7 @@ Finally, to avoid a DH key too small error, log in to OMERO.insight as root to t
 ### c. OMERO.web
 <img src="Figures/OMERO_web.png" width = "250">
 
-With OMERO.web, you can create your own webclient to connect to your server anywhere.
+With OMERO.web, you can create your own webclient. To discover the webclient which is pretty similar to OMERO.insight, you can check [this good Getting Started document](https://downloads.openmicroscopy.org/help/pdfs/web-client.pdf).
 
 #### Installation
 Everything you need to install OMERO.web should be **[here](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/web-deployment.html)**. Then, start, stop or restart your webclient with `omero web start`, `omero web stop` and `omero web restart` from the virtual environment created.
@@ -142,9 +142,11 @@ If you try to connect from another router without changing your router parameter
 #### OMERO.webclient VS OMERO.insight
 Congratulations! Now everyone can access to your server.
 
-The webclient allows users to have a quick overview of the server, but it has neither a native image importer nor a search menu (which are bypassable with [OMERO.script](https://omero-guides.readthedocs.io/projects/python/en/latest/server_script.html), see next section).
+The webclient allows users to have an overview of the server but it gives less freedom to the user than with OMERO.insight. For example, there is no way to import images (thanksfully, [here](https://gitlab.com/openmicroscopy/incubator/omero-webimport/) a prototype to fill this gap).
 
-On the other hand, a user can install [OMERO.insight](#a-omeroinsight) and connect to your server ***using your public IP address***.
+but it has neither a native image importer nor a search menu (which are bypassable with [OMERO.script](https://omero-guides.readthedocs.io/projects/python/en/latest/server_script.html), see next section).
+
+On the other hand, a user who wants to use [OMERO.insight](#a-omeroinsight) has to install it. Then, it is possible to connect to your server using your private IP address if the user is connected to the same router.
 
 ## 2- Practice with this repository
 Feel free to download [all the Python codes](Files/) and [the example dataset](Dataset/) and try to reproduce what is shown in the demo video ***(link)***. Note that in each file, you will find a Link section at the end to have further information about the code used.
@@ -183,15 +185,15 @@ It is possible to create your own figures for publication using the server, i.e.
 
 #### Other intresting features
 * As well as OMERO.iviewer and OMERO.figure, there are [other OMERO.web add-ons](https://omero-guides.readthedocs.io/en/latest/web_addons.html).
-* [OMERO.tables](https://omero.readthedocs.io/en/stable/developers/Tables.html) for data storage and analysis
-* OMERO.web [custom applications](https://omero.readthedocs.io/en/stable/developers/Web/CreateApp.html) and [webclient plugins](https://omero.readthedocs.io/en/stable/developers/Web/WebclientPlugin.html)
-* [Other annotation types](https://omero.readthedocs.io/en/stable/developers/Model/StructuredAnnotations.html#annotation-hierarchy) (e.g. comments and tags)
-* [OMERO.dropbox](https://omero.readthedocs.io/en/stable/sysadmins/dropbox.html) for automatic import and [other import methods](https://omero.readthedocs.io/en/stable/sysadmins/import-scenarios.html)
+* [OMERO.tables](https://omero.readthedocs.io/en/stable/developers/Tables.html) for data storage and analysis.
+* OMERO.web [custom applications](https://omero.readthedocs.io/en/stable/developers/Web/CreateApp.html) and [webclient plugins](https://omero.readthedocs.io/en/stable/developers/Web/WebclientPlugin.html).
+* [Other annotation types](https://omero.readthedocs.io/en/stable/developers/Model/StructuredAnnotations.html#annotation-hierarchy) (e.g. comments and tags).
+* [OMERO.dropbox](https://omero.readthedocs.io/en/stable/sysadmins/dropbox.html) for automatic import and [other import methods](https://omero.readthedocs.io/en/stable/sysadmins/import-scenarios.html).
 * [OMERO.mde](https://omero-guides.readthedocs.io/en/latest/mde/docs/index.html) (an extension of OMERO.importer) to retrieve original metadata.
 
 ### b. Useful links
-* The [complete current OMERO documentation](https://omero.readthedocs.io/) and [all the documentation versions](https://docs.openmicroscopy.org/)
-* The [forum](https://forum.image.sc/tag/omero) (and [its previous version](https://www.openmicroscopy.org/community/viewforum.php?f=3))
-* The [Python language bindings](https://omero.readthedocs.io/en/stable/developers/Python.html) and the [OMERO.py documentation](https://omero-py.readthedocs.io/en/stable/)
-* The [OME GitHub](https://github.com/ome) and the [OMERO GitHub topic](https://github.com/topics/omero).
+* The [complete current OMERO documentation](https://omero.readthedocs.io/), [many helpful documents](https://downloads.openmicroscopy.org/help/), and [all the documentation versions](https://docs.openmicroscopy.org/).
+* The [forum](https://forum.image.sc/tag/omero) (and [its previous version](https://www.openmicroscopy.org/community/viewforum.php?f=3)).
+* The [Python language bindings](https://omero.readthedocs.io/en/stable/developers/Python.html) and the [OMERO.py documentation](https://omero-py.readthedocs.io/en/stable/).
+* The [OME GitHub](https://github.com/ome), the [OMERO GitHub topic](https://github.com/topics/omero), and the [OME GitLab](https://gitlab.com/openmicroscopy/).
 * All the [OMERO model objects](https://omero.readthedocs.io/en/stable/developers/Model/EveryObject.html) and the [OME website with OMERO links](http://www.openmicroscopy.org/index.html).
