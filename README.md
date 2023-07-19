@@ -112,7 +112,7 @@ From your machine where the server is mounted, you should be able to log in to t
 
 To share your local server with other machines on the same network, you need to find your local IP address. You can look in the parameters or run `hostname -I` on Linux or `ipconfig` on Windows and Mac. It should look like `192.168.X.X`.
 
-Then you should be able to connect by following a link like [http://192.168.0.1](https://youtu.be/dQw4w9WgXcQ) or [http://192.168.0.1/omero](https://youtu.be/dQw4w9WgXcQ).
+Then you should be able to connect by following a link like [http://192.168.0.175](https://youtu.be/dQw4w9WgXcQ) or [http://192.168.0.175/omero](https://youtu.be/dQw4w9WgXcQ).
 
 If this doesn't work, you can try adding your port in the address using this template: `http://<YOU_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
 
