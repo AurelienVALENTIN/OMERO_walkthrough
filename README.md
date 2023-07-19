@@ -3,10 +3,10 @@ OMERO is a powerful tool for centralizing images in order to view, organize, ana
 
 It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
 
-This GitHub repository is in addition to a demo video (see below) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
+This GitHub repository is in addition to [a demo video](https://youtu.be/w03FbtofhTY) (click on the thumbnail below) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=w03FbtofhTY"><img src="https://img.youtube.com/vi/w03FbtofhTY/0.jpg"></img></a>
+  <a href="https://youtu.be/w03FbtofhTY"><img src="https://img.youtube.com/vi/w03FbtofhTY/maxres2.jpg" width=600></img></a>
 </p>
 
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
@@ -107,7 +107,7 @@ export PATH=/opt/omero/web/venv3/bin:$PATH
 From your machine where the server is mounted, you should be able to log in to the webclient as root by browsing to [localhost](http://localhost) (or [127.0.0.1](http://127.0.0.1), which means the same thing). If you [set up a prefix](https://omero.readthedocs.io/en/stable/sysadmins/unix/install-web/walkthrough/omeroweb-install-ubuntu2004-ice3.6.html#configuring-omero-web), as proposed in the guide, like `/omero`, you may see the page below (which is not actually an error). Just go to [localhost/omero](http://localhost/omero) (or [127.0.0.1/omero](http://127.0.0.1/omero)) to find the webclient.
 
 <p align="center">
-  <img src="Figures/Welcome_to_nginx.png">
+  <img src="Figures/Welcome_to_nginx.png", width=400>
 </p>
 
 To share your local server with other machines on the same network, you need to find your local IP address. You can look in the parameters or run `hostname -I` on Linux or `ipconfig` on Windows and Mac. It should look like `192.168.X.X`.
