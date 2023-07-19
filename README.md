@@ -22,11 +22,11 @@ This GitHub repository is in addition to a demo video (see below) that shows how
       - [OMERO.webclient VS OMERO.insight](omerowebclient-vs-omeroinsight)
 - [2- Practice with this repository](#2--practice-with-this-repository)
 - [3- Annexes](3--annexes)
-  - [a. Skipped features](#a--skipped-features)
+  - [a. Skipped features](#a-skipped-features)
     - [OMERO.iviewer](#omeroiviewer)
     - [OMERO.figure](#omerofigure)
     - [Other intresting features](#other-intresting-features)
-  - [b. Useful links](#b--useful-links)
+  - [b. Useful links](#b-useful-links)
 
 
 ## 1- OMERO installation
