@@ -39,8 +39,7 @@ OMERO.insight is an application to run OMERO. You can check [this good Getting S
 
 * Download [here](https://www.openmicroscopy.org/omero/downloads/) the appropriate files for your OS.
 * Unzip and run the .exe file or `bin/omero-insight`
-* Log in to a server. If you just want to try your hand at OMERO, you can use the OME demo server: create your account [here](https://demo.openmicroscopy.org/signup/) and then connect to OMERO.web [here](https://demo.openmicroscopy.org). Otherwise, you can create your own server by installing OMERO.server.
-
+* Log in to a server. If you just want to try your hand at OMERO, you can use the OME demo server: create your account [here](https://demo.openmicroscopy.org/signup/) and then connect in OMERO.insight to the `demo.openmicroscopy.org` server ot to the OMERO webclient [here](https://demo.openmicroscopy.org). Otherwise, you can create your own server by installing OMERO.server.
 
 
 ### b. OMERO.server
