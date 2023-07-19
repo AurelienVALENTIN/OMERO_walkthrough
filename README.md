@@ -3,7 +3,7 @@ OMERO is a powerful tool for centralizing images in order to view, organize, ana
 
 It was developed by OME (Open Microscopy Environment) and it works with objects (e.g. Image, Dataset and Project), hence the name OMERO for OME Remote Objects.
 
-This GitHub repository is in addition to [a demo video](https://youtu.be/w03FbtofhTY) (click on the thumbnail below) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
+This GitHub repository is in addition to [a demo video](https://youtu.be/w03FbtofhTY) (clickable thumbnail below) that shows how to automatically import, query and process images in OMERO. You can find the used codes in the [files repository](Files/) and an example dataset in the [dataset repository](Dataset/).
 
 <p align="center">
   <a href="https://youtu.be/w03FbtofhTY"><img src="https://img.youtube.com/vi/w03FbtofhTY/maxres2.jpg" width=600></img></a>
@@ -113,7 +113,7 @@ To share your local server with other machines on the same network, you need to 
 
 Then you should be able to connect by following a link like [http://192.168.0.175](https://youtu.be/dQw4w9WgXcQ) or [http://192.168.0.175/omero](https://youtu.be/dQw4w9WgXcQ).
 
-If this doesn't work, you can try adding your port in the address using this template: `http://<YOU_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
+If this doesn't work, you can try adding your port in the address using this template: `http://<YOUR_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
 
 #### Access to OMERO.server from anywhere
 To be able to use your server no matter on what you are connected to, it is necessary to do either [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) or [tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol). Port forwarding allows any computer with OMERO.insight to connect to your server, but it requires more complicated settings than tunneling and is less secure. See [here](https://superuser.com/a/749928) for some technical differences between port forwarding and tunneling.
