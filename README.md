@@ -116,7 +116,7 @@ Then you should be able to connect by following a link like [http://192.168.0.17
 If this doesn't work, you can try adding your port in the address using this template: `http://<YOUR_LOCAL_IP_ADDRESS>:<YOUR_PORT>`.
 
 #### Access to OMERO.server from anywhere
-To be able to use your server no matter on what you are connected to, it is necessary to do either [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) or [tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol). Port forwarding allows any computer with OMERO.insight to connect to your server, but it requires more complicated settings than tunneling and is less secure. See [here](https://superuser.com/a/749928) for some technical differences between port forwarding and tunneling.
+To be able to use your server no matter on what you are connected to, it is necessary to do either [port forwarding](https://en.wikipedia.org/wiki/Port_forwarding) or [tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol). Port forwarding allows any computer with OMERO.insight to connect to your server, but it requires more complicated settings than tunneling and is less secure. See [here](https://superuser.com/a/749928) for some technical differences between port forwarding and tunneling. And be careful whether or not your institution accepts remote access to your computer...
 
 So, let us opt for tunneling, a great comparison of available tools is proposed [here](https://github.com/anderspitman/awesome-tunneling). In this ReadMe, we will show you how to create a public URL from our local server using the easy-to-use [LocalToNet](https://localtonet.com) website.
 
