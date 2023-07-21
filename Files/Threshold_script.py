@@ -229,7 +229,6 @@ client.closeSession()
 
 # LINKS
 # For more information about OMERO.scripts: https://omero.readthedocs.io/en/stable/developers/scripts/index.html
-# Threshold method adapted from https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python
 # Adding key:value pairs from https://omero.readthedocs.io/en/stable/developers/Python.html#write-data
 # filter_by_kv function adapted from the eponymous ezomero function: https://thejacksonlaboratory.github.io/ezomero/ezomero.html
 # Apparently, output while the script is running for loading is not possible: https://omero.readthedocs.io/en/stable/developers/scripts/style-guide.html#script-outputs
