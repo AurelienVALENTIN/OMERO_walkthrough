@@ -21,7 +21,7 @@ This GitHub repository is in addition to [a demo video](https://youtu.be/w03Fbto
       - [Access to OMERO.server from anywhere](#access-to-omeroserver-from-anywhere)
       - [OMERO.webclient VS OMERO.insight](#omerowebclient-vs-omeroinsight)
 - [2- Practice with this repository](#2--practice-with-this-repository)
-- [3- Annexes](3--annexes)
+- [3- Annexes](#3--annexes)
   - [a. Skipped features](#a-skipped-features)
     - [OMERO.iviewer](#omeroiviewer)
     - [OMERO.figure](#omerofigure)
