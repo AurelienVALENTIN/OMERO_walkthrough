@@ -151,9 +151,17 @@ but it has neither a native image importer nor a search menu (which are bypassab
 On the other hand, a user who wants to use [OMERO.insight](#a-omeroinsight) has to install it. Then, it is possible to connect to your server using your private IP address if the user is connected to the same router.
 
 ## 2- Practice with this repository
-Feel free to download [all the Python codes](Files/) and [the example dataset](Dataset/) and try to reproduce what is shown in the demo video ***(link)***. Note that in each file, you will find a Link section at the end to have further information about the code used.
+Feel free to download [all the Python codes](Files/) and [the example dataset](Dataset/) and try to reproduce what is shown in [the demo video](https://youtu.be/w03FbtofhTY). 
 
-Here are some details about the python files:
+To run the codes you will need to install some OMERO Python packages:
+```
+pip install zeroc-ice==3.6.5
+pip install omero-py
+```
+
+Note that in each python file, you will find a Link section at the end to have further information about the code used.
+
+Here are some details about the codes:
 1. [**Create a project and datasets**](Files/1_Create_project_and_datasets.py): To start, create a place to save your data. In OMERO, images are always stored in datasets, and datasets can be stored in projects.
 2. [**Import images**](Files/2_Image_import.py): Next, import your images using the CLI (Command Line Interface). There are several ways to import images, the classical way will copy-paste everything (which is not interesting for large datasets). Here, we use the so called "In-place" import to just create a link to the original file.
 3. [**Metadata import**](Files/3_Metadata_import.py): Each image has some relative information that can be stored in a .csv file. Here we associate all these metadata with each image as Key:Value pairs (e.g. Year:2020).
