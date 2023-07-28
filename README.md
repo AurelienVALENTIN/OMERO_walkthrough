@@ -9,6 +9,8 @@ This GitHub repository is in addition to [a demo video](https://youtu.be/w03Fbto
   <a href="https://youtu.be/w03FbtofhTY"><img src="https://img.youtube.com/vi/w03FbtofhTY/maxres2.jpg" width=600></img></a>
 </p>
 
+Note that alternative softwares exist such as Knime. See [this video](https://youtu.be/k2Y_6PDpaBw) I also made about it.
+
 <!-- ![Some figures](Figures/Some_figures.png?raw=true) -->
 
 ## Table of contents
